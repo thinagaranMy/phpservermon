@@ -217,10 +217,10 @@ abstract class AbstractController implements ControllerInterface
         if (!$this->xhr) {
             // in XHR mode, we will not add the main template
             $tpl_data = array(
-                'title' => strtoupper(psm_get_lang('system', 'title')),
-                'label_back_to_top' => psm_get_lang('system', 'back_to_top'),
+                'title' => 'BITN SERVER MONITOR',
+                'label_back_to_top' => en_US,
                 'add_footer' => $this->add_footer,
-                'version' => 'v' . PSM_VERSION,
+                'version' => 'v' . 0.1,
                 'messages' => $this->getMessages(),
                 'html_content' => $html,
             );
@@ -285,10 +285,10 @@ abstract class AbstractController implements ControllerInterface
 
         switch ($ulvl) {
             case PSM_USER_ADMIN:
-                $items = array('server_status', 'server', 'server_log', 'user', 'config', 'server_update');
+                $items = array('server_status', 'server', 'user');
                 break;
             case PSM_USER_USER:
-                $items = array('server_status', 'server', 'server_log', 'server_update');
+                $items = array('server_status', 'server', );
                 break;
             default:
                 $items = array();
@@ -320,7 +320,7 @@ abstract class AbstractController implements ControllerInterface
      */
     protected function addFooter($value)
     {
-        $this->add_footer = $value;
+        $this->add_footer = "Gandhi";
     }
 
     /**

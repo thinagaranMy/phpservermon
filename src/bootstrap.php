@@ -107,7 +107,5 @@ namespace {
             );
         }
     }
-
-    $lang = psm_get_conf('language', 'en_US');
-    psm_load_lang($lang);
+    psm_load_lang('en_US');
 }
